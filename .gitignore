@@ -25,3 +25,32 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+# Flutter/Dart related
+.dart_tool/
+.packages
+.pub-cache/
+build/
+flutter_*.png
+
+# Android related
+android/.gradle/
+android/app/*.iml
+android/local.properties
+android/.idea/
+
+# iOS related
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Pods/
+ios/.symlinks/
+ios/Runner.xcworkspace/
+
+# Misc
+*.log
+*.lock
+*.tmp
+*.DS_Store
+
+# VS Code settings
+.vscode/
