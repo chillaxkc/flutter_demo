@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/setting/text_page.dart';
+import 'button_page.dart';
 
 class BaseUsePage extends StatefulWidget {
 
@@ -54,10 +55,10 @@ class _BaseUsePageState extends State<BaseUsePage> {
     print('Setting $index');
     switch (index) {
       case 0:
-        pushTextAction();
+        pushTextAction(TextPage());
         break;
       case 1:
-        print('Setting $index');
+        pushTextAction(ButtonPage());
         break;
       case 2:
         print('Setting $index');
@@ -66,10 +67,10 @@ class _BaseUsePageState extends State<BaseUsePage> {
         print('Setting $index');
     }
   }
-  void pushTextAction(){
+  void pushTextAction(Widget page){
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => TextPage()),
+      MaterialPageRoute(builder: (context) => page),
     );
   }
 }
