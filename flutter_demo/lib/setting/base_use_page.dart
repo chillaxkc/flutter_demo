@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/setting/text_page.dart';
 import 'button_page.dart';
-
+import 'image_page.dart';
 class BaseUsePage extends StatefulWidget {
 
   @override
@@ -61,7 +61,7 @@ class _BaseUsePageState extends State<BaseUsePage> {
         pushTextAction(ButtonPage());
         break;
       case 2:
-        print('Setting $index');
+        pushTextAction(ImagePage());
         break;
       default:
         print('Setting $index');
