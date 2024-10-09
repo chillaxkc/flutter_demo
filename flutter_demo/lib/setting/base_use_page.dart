@@ -1,10 +1,11 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/setting/list_page_second.dart';
 import 'package:flutter_demo/setting/text_page.dart';
 import 'button_page.dart';
 import 'image_page.dart';
 import 'input_page.dart';
-
+import 'list_page.dart';
 class BaseUsePage extends StatefulWidget {
 
   @override
@@ -19,6 +20,7 @@ class _BaseUsePageState extends State<BaseUsePage> {
     '图片',
     '输入框',
     '列表',
+    '列表2',
     '卡片',
     '对话框',
     '进度条',
@@ -67,6 +69,11 @@ class _BaseUsePageState extends State<BaseUsePage> {
         break;
       case 3:
         pushTextAction(InputPage());
+        break;
+      case 4:
+        pushTextAction(ListPage());
+      case 5:
+        pushTextAction(ListSecondPage());
         break;
       default:
         print('Setting $index');
