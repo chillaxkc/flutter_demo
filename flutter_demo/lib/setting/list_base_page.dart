@@ -1,34 +1,26 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/setting/text_page.dart';
-import 'button_page.dart';
-import 'image_page.dart';
-import 'input_page.dart';
-import 'list_base_page.dart';
+import 'listpage/list_page.dart';
+import 'listpage/list_page_second.dart';
+import 'listpage/grid_page.dart';
+import 'listpage/grid_view_count_page.dart';
+import 'listpage/grid_extent_page.dart';
+import 'listpage/grid_tile_page.dart';
 
-class BaseUsePage extends StatefulWidget {
+class ListBasePage extends StatefulWidget {
 
   @override
-  State<BaseUsePage> createState() => _BaseUsePageState();
+  State<ListBasePage> createState() => _ListBasePageState();
 }
 
-class _BaseUsePageState extends State<BaseUsePage> {
+class _ListBasePageState extends State<ListBasePage> {
 
   final List<String> _items = [
-    '文本',
-    '按钮',
-    '图片',
-    '输入框',
     '列表',
-    '卡片',
-    '对话框',
-    '进度条',
-    '进度指示器',
-    '底部导航栏',
-    '底部弹出框',
-    '底部弹出菜单',
-    '底部弹出选项卡',
-    '底部弹出选项卡',
+    '列表2',
+    '网格布局GridViewbBuilder',
+    '网格布局GridViewCount',
+    '网格布局GridExtentPage',
+    '网格布局GridTilePage'
   ];
 
   @override
@@ -58,19 +50,22 @@ class _BaseUsePageState extends State<BaseUsePage> {
     print('Setting $index');
     switch (index) {
       case 0:
-        pushTextAction(TextPage());
+        pushTextAction(ListPage());
         break;
       case 1:
-        pushTextAction(ButtonPage());
+        pushTextAction(ListSecondPage());
         break;
       case 2:
-        pushTextAction(ImagePage());
+        pushTextAction(GridPage());
         break;
       case 3:
-        pushTextAction(InputPage());
+        pushTextAction(GridViewCountPage());
         break;
       case 4:
-        pushTextAction(ListBasePage());
+        pushTextAction(GridExtentPage());
+        break;
+      case 5:
+        pushTextAction(GridTilePage());
         break;
       default:
         print('Setting $index');

@@ -13,7 +13,7 @@ class _ListSecondPageState extends State<ListSecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('列表页'),
+        title: const Text('自定义Item'),
       ),
       body: ListView.builder(
         itemCount: 20,
