@@ -5,6 +5,12 @@ import 'button_page.dart';
 import 'image_page.dart';
 import 'input_page.dart';
 import 'list_base_page.dart';
+import 'card_page.dart';
+import 'alertview/alert_list_page.dart';
+import 'progress/progress_page.dart';
+import 'slider/slider_page.dart';
+import 'alertview/alert_bottom_page.dart';
+import 'scroll/scroll_page.dart';
 
 class BaseUsePage extends StatefulWidget {
 
@@ -23,12 +29,9 @@ class _BaseUsePageState extends State<BaseUsePage> {
     '卡片',
     '对话框',
     '进度条',
-    '进度指示器',
-    '底部导航栏',
+    '滑条',
     '底部弹出框',
-    '底部弹出菜单',
-    '底部弹出选项卡',
-    '底部弹出选项卡',
+    '滚动视图'
   ];
 
   @override
@@ -71,6 +74,24 @@ class _BaseUsePageState extends State<BaseUsePage> {
         break;
       case 4:
         pushTextAction(ListBasePage());
+        break;
+      case 5:
+        pushTextAction(CardPage());
+        break;
+      case 6:
+        pushTextAction(AlertListPage());
+        break;
+      case 7:
+        pushTextAction(ProgressPage());
+        break;
+      case 8:
+        pushTextAction(SliderPage());
+        break;
+      case 9:
+        pushTextAction(AlertBottomPage());
+        break;
+      case 10:
+        pushTextAction(ScrollPage());
         break;
       default:
         print('Setting $index');
